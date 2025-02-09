@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-blurry-gray: #dfeafe;
+  --color-pink: #f9e7f6;
+  --color-black: #000000;
+  --color-gray: #545b6c;
+  --color-blue: #395aea;
+  --color-purple: #8837ea;
+  --color-broken-white: #f6f4f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Poppins", serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.text-primary {
+  color: var(--color-black);
+}
+
+.text-secondary {
+  color: var(--color-gray);
+}
+
+.bg-blurry-gray {
+  background-color: var(--color-blurry-gray);
+}
+
+.bg-pink {
+  background-color: var(--color-pink);
+}
+
+.bg-broken-white {
+  background-color: var(--color-broken-white);
+}
