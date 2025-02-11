@@ -1,5 +1,8 @@
-import { Navbar } from "@/components";
+"use client";
+
+import { Footer, Navbar } from "@/components";
 import { Globe, Wallet, Zap } from "lucide-react";
+import { ExploreMarketplace } from "../exploreMarket/ExploreMarket";
 
 export const LandingPage = () => {
   return (
@@ -18,14 +21,25 @@ export const LandingPage = () => {
             and creative digital experiences. Seamlessly explore, trade, and
             interact with next-generation digital assets
           </p>
-          <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:scale-105 transition transform">
+          <button
+            className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full hover:scale-105 transition transform"
+            onClick={() =>
+              document
+                .getElementById("features")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
             Get Started
           </button>
         </div>
       </section>
-      <section id="features" className="pt-16 bg-broken-white">
+
+      <section
+        id="features"
+        className="min-h-screen bg-broken-white flex flex-col justify-center items-center"
+      >
         <h2
-          className="text-4xl font-bold text-center mb-16 
+          className="text-5xl font-bold text-center mb-16 
             bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600"
         >
           Our Key Features
@@ -59,6 +73,17 @@ export const LandingPage = () => {
             </p>
           </div>
         </div>
+      </section>
+
+      <section
+        id="explore"
+        className="bg-gradient-to-br from-blue-600 to-purple-400"
+      >
+        <ExploreMarketplace />
+      </section>
+
+      <section id="footer">
+        <Footer />
       </section>
     </main>
   );
