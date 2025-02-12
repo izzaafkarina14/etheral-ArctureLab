@@ -22,7 +22,7 @@ export const Logo = () => {
           className="text-primary text-4xl font-bold cursor-pointer"
           onClick={handleLogoClick}
         >
-          Etheral
+          Ethereal
         </h1>
       )}
     </div>

@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Etheral",
+  title: "Ethereal",
   description: "Discover the Future of Decentralized Art & Finance",
 };
 
@@ -20,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} ${poppins.variable} antialiased`}
-      >
+      <body className={`${poppins.variable} ${poppins.variable} antialiased`}>
         {children}
       </body>
     </html>

@@ -17,7 +17,7 @@ export const LandingPage = () => {
             Discover the Future of Decentralized Art & Finance
           </h1>
           <p className="text-lg md:text-xl mt-8 mb-8 text-gray-700 opacity-35">
-            Etheral bridges the gap bet ween cutting-edge blockchain technology
+            Ethereal bridges the gap bet ween cutting-edge blockchain technology
             and creative digital experiences. Seamlessly explore, trade, and
             interact with next-generation digital assets
           </p>

@@ -2,7 +2,7 @@ import { MarketCatalog } from "@/features";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Etheral | Catalog",
+  title: "Ethereal | Catalog",
   description: "Unlock the beauty inside.",
 };
 
