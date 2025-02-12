@@ -24,6 +24,19 @@ A modern web application for exploring and interacting with NFTs, built with Nex
 1. Clone the repository:
 ```bash
 git clone https://github.com/izzaafkarina14/etheral-ArctureLab
+```
+
+2. Move to the folder `ethereal`:
+```bash
 cd ethereal
+```
+
+3. Install all teh package:
+```bash
 npm i
+```
+
+4. Run the project:
+```bash
 npm run dev
+```
