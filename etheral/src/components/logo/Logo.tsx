@@ -1,16 +1,30 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { Loader } from "../loader/Loader";
 
 export const Logo = () => {
   const router = useRouter();
+  const [isLoading, setIsloading] = useState<boolean>(false);
+
+  const handleLogoClick = () => {
+    setIsloading(true);
+    router.push("landing-page");
+  };
 
   return (
-    <h1
-      className="text-primary text-4xl font-bold cursor-pointer"
-      onClick={() => router.push("/landing-page")}
-    >
-      Etheral
-    </h1>
+    <div>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <h1
+          className="text-primary text-4xl font-bold cursor-pointer"
+          onClick={handleLogoClick}
+        >
+          Etheral
+        </h1>
+      )}
+    </div>
   );
 };
