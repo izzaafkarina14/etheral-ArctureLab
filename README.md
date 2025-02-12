@@ -31,7 +31,7 @@ git clone https://github.com/izzaafkarina14/etheral-ArctureLab
 cd ethereal
 ```
 
-3. Install all teh package:
+3. Install all the package:
 ```bash
 npm i
 ```
