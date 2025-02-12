@@ -1,30 +1,41 @@
 "use client";
 
-import { Footer, Logo } from "@/components";
+import { Footer, Loader, Logo } from "@/components";
 import { Catalog } from "@/utils/catalog";
 import { Eye, MoveLeft } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export const MarketCatalog = () => {
   const router = useRouter();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const handleBackIconClick = () => {
+    setIsLoading(true);
+    router.push("/landing-page");
+  };
 
   return (
     <div className="bg-broken-white min-h-screen">
       <div className="max-w-screen-xl mx-auto">
-        <div className="flex justify-between items-center py-4">
-          <MoveLeft
-            className="cursor-pointer hover:scale-x-110 transition-transform"
-            onClick={() => router.push("/landing-page")}
-          />
+        <div className="flex justify-between items-center py-4 px-4">
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <MoveLeft
+              className="cursor-pointer hover:scale-x-110 transition-transform"
+              onClick={handleBackIconClick}
+            />
+          )}
           <Logo />
         </div>
         <div>
-          <h1 className="text-4xl text-center font-semibold py-20">
+          <h1 className="text-4xl md:text-6xl text-center font-semibold py-20 sm:py-20">
             Unlock the beauty inside.
           </h1>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md pb-10 px-4">
           {Catalog.map((item, index) => (
             <div
               key={index}
